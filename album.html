@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="shortcut icon" href="Images/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="album.css">
+</head>
+
+
+
+<div class="maintenancepopup">
+    <div class="maintenancebox">
+        <img src="Images/spotifylogo.png" alt="">
+        <h2 class="mainhead">Service Under Maintenance</h2>
+        <p class="maintext">This feature is currently unavailable and is under maintenance.
+            Please try again later.</p>
+        <button class="closemaintenance">Got It</button>
+    </div>
+</div>
+
+<div class="languagepopup">
+    <div class="languagebox">
+        <h2>More Languages Coming Soon</h2>
+        <p>We're currently working on adding support for more languages. Stay tuned for future updates.</p>
+        <button class="closelanguage">Got It</button>
+    </div>
+</div>
+
+<div class="footpopup">
+    <div class="footbox">
+        <div class="foottop">
+            <h2>Spotify Information</h2>
+            <button class="closefootpopup">X</button>
+        </div>
+
+        <div class="footcontent">
+            <div class="footsection">
+                <h3>Legal</h3>
+                <p>This Spotify-inspired music player project has been developed purely for educational and personal
+                    learning purposes. All audio tracks, images, album covers, artist names, and trademarks belong to
+                    their respective owners and copyright holders. The application does not claim ownership over any
+                    third-party content used within the project. Any resemblance to existing platforms is intended only
+                    for UI/UX practice and frontend development learning. Redistribution or commercial use of
+                    copyrighted content is not encouraged through this project.</p>
+            </div>
+
+            <div class="footsection">
+                <h3>Privacy Policy</h3>
+                <p>We value user privacy and aim to maintain a secure browsing experience throughout the application.
+                    This demo project does not collect, store, or distribute sensitive personal information from users.
+                    No authentication systems, payment gateways, or external tracking services are currently integrated
+                    into the platform. Local browser storage may occasionally be used to improve user experience, such
+                    as remembering playback preferences or UI settings. Users remain fully in control of their browser
+                    data and session activity.</p>
+            </div>
+
+            <div class="footsection">
+                <h3>Safety Center</h3>
+                <p>User safety and responsible digital interaction remain important aspects of this application. The
+                    platform is designed to encourage respectful and ethical usage of all available features and media
+                    resources. Users are advised not to upload harmful, misleading, or unauthorized content into the
+                    system. Any future community-based or collaborative features will aim to include moderation systems,
+                    reporting tools, and platform safety standards. Maintaining a positive and safe user environment
+                    will continue to remain a development priority.</p>
+            </div>
+
+            <div class="footsection">
+                <h3>Cookies</h3>
+                <p>Cookies and browser storage technologies can help improve usability, personalization, and playback
+                    continuity within modern web applications. This project may use lightweight local storage
+                    functionality to remember user preferences such as volume level, playback state, repeat mode, or
+                    recently played tracks. No advertising, behavioral tracking, or third-party analytics cookies are
+                    intentionally used within this educational project. Users can manage or clear stored browser data
+                    anytime through their browser settings. These technologies are used only to enhance the overall user
+                    experience.</p>
+            </div>
+
+            <div class="footsection">
+                <h3>About Us</h3>
+                <p>This music player project was created as a frontend development practice application inspired by
+                    modern streaming platforms. The project focuses on building interactive user interfaces using HTML,
+                    CSS, and JavaScript while improving understanding of event listeners, DOM manipulation, responsive
+                    layouts, and audio handling systems. Multiple features such as dynamic song loading, album
+                    navigation, popups, playback controls, and responsive UI elements have been implemented to simulate
+                    a real-world streaming experience. The project continues to evolve with ongoing improvements and new
+                    functionality additions.</p>
+            </div>
+
+            <div class="footsection">
+                <h3>Accessibility</h3>
+                <p>Accessibility and responsive design are important goals for the overall user experience of this
+                    application. Efforts are being made to ensure the platform remains usable across different devices,
+                    screen sizes, and interaction methods. Clear typography, readable layouts, keyboard accessibility,
+                    and intuitive navigation patterns are considered while designing the interface. Future updates may
+                    include improved screen-reader support, enhanced contrast systems, and additional accessibility
+                    optimizations. The aim is to create an inclusive and comfortable listening experience for all users.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fullscreenpopup">
+    <div class="fullscreenbox">
+        <button class="closefullscreen">✕</button>
+        <img class="fullscreencover" src="Images/playingmusic.jpg">
+        <h1 class="fullscreentitle">No Song Playing</h1>
+        <p class="fullscreenartist">Unknown Artist</p>
+        <div class="fullscreencontrols">
+            <img class="fullprevious" src="Images/previous.png">
+            <img class="fullplay" src="Images/play-button.png">
+            <img class="fullnext" src="Images/next-button.png">
+        </div>
+    </div>
+</div>
+
+<div class="premiumpopup">
+    <div class="premiumbox">
+        <button class="closepremium">✕</button>
+        <h1>Spotify Premium</h1>
+        <p class="premiumsubtitle">Enjoy uninterrupted music with premium features absolutely for free charge of cost for now. Charges may apply after a timely deadline.</p>
+        <div class="premiumfeatures">
+            <div class="premiumcard">
+                <h3>Ad-Free Music</h3>
+                <p>Listen to your favorite songs withoutinterruptions or advertisements.</p>
+            </div>
+            <div class="premiumcard">
+                <h3>Offline Playback</h3>
+                <p>Download songs and enjoy music even without internet connection.</p>
+            </div>
+            <div class="premiumcard">
+                <h3>High Quality Audio</h3>
+                <p>Experience enhanced sound quality and immersive listening.</p>
+            </div>
+        </div>
+        <button class="premiumjoin">Explore Premium</button>
+    </div>
+</div>
+
+<div class="successpopup">
+    <div class="successbox">
+        <img width="90px" src="Images/spotifylogo.png">
+        <h1>Congratulations!</h1>
+        <p>You have successfully activated Spotify Premium. Enjoy ad-free music, offline playback, and high quality audio streaming.</p>
+        <button class="closesuccess">Start Listening</button>
+    </div>
+</div>
+<div class="supportpopup">
+    <div class="supportbox">
+        <button class="closesupport">✕</button>
+        <h1>Spotify Support Center</h1>
+        <p class="supportsubtitle">How can we help you today?</p>
+        <div class="supportcards">
+            <div class="supportcard">
+                <h3>Playback Issues</h3>
+                <p>Fix problems related to audio playback, buffering, or unavailable songs.</p>
+            </div>
+            <div class="supportcard">
+                <h3>Account Help</h3>
+                <p>Manage account settings, passwords, subscriptions, and login issues.</p>
+            </div>
+            <div class="supportcard">
+                <h3>Report a Bug</h3>
+                <p>Found a problem? Report technical bugs and help improve the platform experience.</p>
+            </div>
+        </div>
+        <button class="contactsupport">Contact Support</button>
+    </div>
+</div>
+<div class="supportsuccesspopup">
+    <div class="supportsuccessbox">
+        <img width="90px" src="Images/spotifylogo.png">
+        <h1>Support Request Sent</h1>
+        <p>Our support team has received your request. We will reach out to you shortly and help resolve your issue as soon as possible.</p>
+        <button class="closesupportsuccess">Continue</button>
+    </div>
+</div>
+<div class="authpopup">
+    <div class="authbox">
+        <button class="closeauth">✕</button>
+        <h1 class="authheading">Welcome Back</h1>
+        <p class="authsubtitle">Log in to continue listening</p>
+        <div class="authinputs signupfield"><input type="text" placeholder="Username"></div>
+        <div class="authinputs"><input type="email" placeholder="Email Address"></div>
+        <div class="authinputs"><input type="password" placeholder="Password"></div>
+        <div class="authinputs signupfield"><input type="password" placeholder="Confirm Password"></div>
+        <button class="authsubmit">Log In</button>
+        <p class="authswitch">Don't have an account?
+            <span>Sign Up</span>
+        </p>
+    </div>
+</div>
+<div class="authsuccesspopup">
+    <div class="authsuccessbox">
+        <img width="90px" src="Images/spotifylogo.png">
+        <h1 class="successheading">Welcome to Spotify</h1>
+        <p class="successmessage">Your account has been successfully created.</p>
+        <button class="closeauthsuccess">Continue Listening</button>
+    </div>
+</div>
+
+<div class="playlistpopup">
+    <div class="playlistbox">
+        <div class="playlisttop">
+            <h2>Add Songs To Playlist</h2>
+            <button class="closeplaylistpopup">✕</button>
+        </div>
+        <div class="playlistcontent"></div>
+        <button class="addselectedsongs">Add Songs</button>
+    </div>
+</div>
+
+<div class="removepopup">
+    <div class="removebox">
+        <div class="removetop">
+            <h2>Manage Playlist</h2>
+            <button class="closeremovepopup">✕</button>
+        </div>
+        <div class="removecontent"></div>
+    </div>
+</div>
+
+<div class="columnpopup">
+    <div class="columnbox">
+        <button class="closecolumnpopup">✕</button>
+        <h1 class="columnheading">Company Information</h1>
+        <div class="columncontent">
+            <div class="columnsection">
+                <h2>About Us</h2>
+                <p>
+                    Spotify is focused on creating immersive digital music experiences that connect listeners with their favorite artists and audio content from around the world. This project draws inspiration from modern streaming platforms and aims to recreate realistic frontend interactions using HTML, CSS, and JavaScript. Multiple systems such as dynamic playback, playlist management, popup architecture, and responsive layouts have been developed to simulate a real-world music streaming application experience. The platform continues evolving with ongoing feature enhancements and interface improvements. User interaction and smooth usability remain central priorities throughout development.
+                </p>
+            </div>
+
+            <div class="columnsection">
+                <h2>Jobs</h2>
+                <p>
+                    Modern music streaming platforms require collaboration between frontend developers, backend engineers, designers, audio specialists, and infrastructure teams to create seamless listening experiences. This project reflects many real frontend development concepts such as event-driven architecture, DOM manipulation, reusable UI systems, and responsive interaction design. Continuous learning and experimentation remain important aspects of software engineering and product development. Future improvements may include authentication systems, database integration, user accounts, and cloud deployment workflows.
+                </p>
+            </div>
+
+            <div class="columnsection">
+                <h2>For Record</h2>
+                <p>
+                    Music platforms manage large collections of digital audio content, artist metadata, playlists, album artwork, and listening analytics across millions of users worldwide. Organizing and presenting information efficiently is an important part of creating responsive and scalable applications. This project currently focuses on frontend functionality and user interaction systems while simulating realistic media organization and playback structures. Additional improvements may later include persistent playlists, recommendation systems, and advanced search functionality.
+                </p>
+            </div>
+
+            <div class="columnsection">
+                <h2>Report Bug</h2>
+                <p>
+                    Debugging and issue tracking play important roles in frontend application development. During the creation of this project, multiple challenges related to event listeners, playback synchronization, popup management, dynamic rendering, and navigation handling were solved through iterative improvements and testing. User feedback and bug reporting systems help improve application reliability and user experience over time. Future versions of this project may include dedicated reporting systems and automated validation workflows.
+                </p>
+            </div>
+
+            <div class="columnsection">
+                <h2>Privacy Policy</h2>
+                <p>
+                    Protecting user privacy and ensuring secure interaction patterns are important considerations in modern web applications. This project does not intentionally collect or distribute sensitive personal information from users and mainly focuses on frontend learning and UI simulation. Lightweight local storage systems may later be used for remembering playback preferences, playlists, and recently played tracks to improve usability. Transparency, responsible data handling, and safe browsing experiences remain important development goals.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="communitiespopup">
+    <div class="communitiesbox">
+        <button class="closecommunitiespopup">✕</button>
+        <h1 class="communitiesheading">
+            Communities
+        </h1>
+        <div class="communitiescontent">
+            <div class="communitiessection">
+                <h2>For Artists</h2>
+                <p>
+                    Music streaming platforms help artists distribute songs, albums, and audio experiences to listeners across the world. Artists can build audiences, track performance analytics, and improve fan engagement through modern streaming ecosystems. This project recreates many frontend concepts inspired by real-world music applications including playback systems, album interactions, responsive layouts, and playlist management. Future updates may include artist profile pages, recommendation systems, and advanced media organization tools.
+                </p>
+            </div>
+            <div class="communitiessection">
+                <h2>Developers</h2>
+                <p>
+                    Developers play an important role in building scalable streaming applications using frontend and backend technologies. This project focuses heavily on frontend development concepts such as JavaScript event handling, responsive UI architecture, popup systems, DOM manipulation, and music playback management. Continuous testing and debugging were important parts of the development process. Future improvements may include database integration, APIs, authentication systems, and full-stack deployment.
+                </p>
+            </div>
+            <div class="communitiessection">
+                <h2>Advertising</h2>
+                <p>
+                    Advertising systems help streaming platforms support free listening experiences while generating revenue for artists and services. Modern music applications often use sponsored playlists, banners, audio promotions, and recommendation-based campaigns to improve engagement. This educational project currently focuses on clean UI interaction rather than advertisement systems. Future versions may simulate premium plans, subscription models, and ad-supported playback environments.
+                </p>
+            </div>
+            <div class="communitiessection">
+                <h2>Investors</h2>
+                <p>
+                    Digital streaming platforms rely on innovation, infrastructure, and scalable technologies to support millions of listeners worldwide. Performance optimization, responsive design, and efficient media delivery are important aspects of large streaming ecosystems. This project explores many frontend techniques inspired by modern streaming applications while remaining focused on learning and experimentation. Continuous feature expansion and UI improvements remain important development goals.
+                </p>
+            </div>
+            <div class="communitiessection">
+                <h2>Vendors</h2>
+                <p>
+                    Streaming services often collaborate with cloud providers, analytics systems, licensing partners, and infrastructure vendors to maintain reliable platform performance. Music applications require stable hosting systems, media delivery networks, and scalable backend services to support seamless listening experiences. This project currently emphasizes frontend interaction systems while simulating realistic streaming platform behavior. Future enhancements may include cloud storage, external APIs, and persistent playlist systems.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="usefullinkspopup">
+    <div class="usefullinksbox">
+        <button class="closeusefullinkspopup">✕</button>
+        <h1 class="usefullinksheading">Useful Links</h1>
+        <div class="usefullinkscontent">
+            <div class="usefullinkssection">
+                <h2>Support</h2>
+                <p>
+                    Support systems help users resolve playback issues, technical problems, account-related concerns, and platform navigation difficulties. Modern streaming applications often include dedicated support centers, troubleshooting workflows, and customer assistance services to improve user experience. This project recreates multiple interactive frontend systems while focusing on responsive design and event-driven architecture. Future improvements may include real-time help systems, feedback forms, and enhanced debugging tools for better usability.
+                </p>
+            </div>
+            <div class="usefullinkssection">
+                <h2>Free Mobile App</h2>
+                <p>
+                    Mobile streaming applications allow users to access music libraries, playlists, podcasts, and albums from anywhere using responsive and optimized interfaces. Modern music platforms prioritize smooth playback, offline access, and seamless synchronization across devices to improve accessibility and convenience. This project currently focuses on desktop frontend architecture while simulating realistic music streaming interactions inspired by modern applications. Future versions may include responsive mobile layouts and cross-device playback support.
+                </p>
+            </div>
+            <div class="usefullinkssection">
+                <h2>Popular Artists</h2>
+                <p>
+                    Streaming platforms help listeners discover popular artists through curated playlists, trending recommendations, featured albums, and personalized listening experiences. Artist discovery systems often use analytics, listening behavior, and recommendation algorithms to improve audience engagement and content visibility. This educational project currently focuses on frontend interactivity and realistic album presentation systems while simulating many concepts inspired by modern streaming ecosystems. Future improvements may include artist pages and recommendation engines.
+                </p>
+            </div>
+            <div class="usefullinkssection">
+                <h2>Trending Albums</h2>
+                <p>
+                    Trending album sections help users discover newly released or highly popular music collections through organized and visually engaging interfaces. Modern streaming platforms use charts, engagement metrics, and listening analytics to determine trending content across different genres and audiences. This project recreates album navigation systems, playback interactions, and dynamic playlist functionality inspired by real-world music applications. Future versions may introduce live ranking systems and personalized album recommendations.
+                </p>
+            </div>
+            <div class="usefullinkssection">
+                <h2>Music Charts</h2>
+                <p>
+                    Music charts organize songs and albums based on popularity, engagement, streaming activity, and listener preferences across different regions and genres. Streaming platforms often update chart rankings dynamically to reflect real-time listening behavior and audience trends. This project focuses on frontend simulation and playback systems while experimenting with scalable UI layouts and interactive user experiences. Future updates may include chart-based filtering systems, top playlists, and dynamic ranking interfaces.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="planspopup">
+    <div class="plansbox">
+        <button class="closeplanspopup">✕</button>
+        <h1 class="plansheading">Spotify Plans</h1>
+        <div class="planscontent">
+            <div class="planssection">
+                <h2>Premium Individual</h2>
+                <p>
+                    Premium Individual offers uninterrupted music streaming with ad-free playback, unlimited skips, offline listening, and enhanced audio quality for a single user. Modern streaming platforms prioritize personalized experiences and smooth playback systems to improve listening comfort and accessibility. This project recreates several frontend concepts inspired by premium music applications including responsive UI systems, dynamic playback controls, and immersive interface interactions.
+                </p>
+            </div>
+            <div class="planssection">
+                <h2>Premium Duo</h2>
+                <p>
+                    Premium Duo plans are designed for two users who want independent listening experiences while sharing a single subscription environment. Streaming applications often use collaborative systems, shared playlists, and synchronized recommendations to improve user engagement across connected accounts. This project focuses on frontend simulation and interactive playback systems while exploring scalable user interface design concepts inspired by modern streaming services.
+                </p>
+            </div>
+            <div class="planssection">
+                <h2>Premium Family</h2>
+                <p>
+                    Family plans allow multiple users to access personalized music experiences under one subscription while maintaining individual listening preferences and playlists. Modern streaming platforms use account management systems, recommendation algorithms, and parental controls to create flexible family-friendly environments. This educational project currently focuses on frontend interaction systems and realistic media organization inspired by large-scale music platforms.
+                </p>
+            </div>
+            <div class="planssection">
+                <h2>Premium Student</h2>
+                <p>
+                    Student plans help provide affordable access to premium streaming features while supporting learning, productivity, and entertainment experiences. Music streaming platforms often offer specialized subscription systems tailored for different user communities and listening habits. This project emphasizes frontend learning concepts such as popup architecture, playlist management, event listeners, and responsive interaction systems inspired by modern music applications.
+                </p>
+            </div>
+            <div class="planssection">
+                <h2>Spotify Free</h2>
+                <p>
+                    Spotify Free allows users to enjoy music streaming with limited premium functionality while providing access to large song libraries, playlists, and album collections. Ad-supported listening systems help platforms remain accessible to broader audiences across multiple devices and regions. This project recreates several frontend experiences inspired by free-tier streaming platforms while focusing on responsive layouts, dynamic UI behavior, and realistic playback systems.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="socialpopup">
+    <div class="socialbox">
+        <button class="closesocialpopup">✕</button>
+        <h1 class="socialheading">Connect With Spotify</h1>
+        <div class="socialcontent">
+            <div class="socialsection">
+                <h2>Instagram</h2>
+                <p>
+                    Follow Spotify-inspired updates, album showcases, UI concepts, and visual music experiences through
+                    social media platforms designed for creativity and community interaction. Modern streaming
+                    applications use social engagement systems to help users discover artists, playlists, and trending
+                    music content.
+                </p>
+            </div>
+
+            <div class="socialsection">
+                <h2>Twitter / X</h2>
+                <p>
+                    Stay updated with platform announcements, feature rollouts, playback improvements, and interactive
+                    community discussions through fast-paced social communication channels. Streaming platforms often
+                    use social media to provide updates, gather feedback, and improve overall user engagement.
+                </p>
+            </div>
+            <div class="socialsection">
+                <h2>Facebook</h2>
+                <p>
+                    Community-driven social platforms help users connect through music sharing, collaborative playlists,
+                    album discussions, and streaming recommendations across multiple audiences and devices. Social
+                    integration remains an important part of modern music ecosystem experiences.
+                </p>
+            </div>
+
+            <div class="socialsection">
+                <h2>Community Engagement</h2>
+                <p>
+                    Interactive music platforms rely heavily on community feedback, creative collaboration, and social
+                    interaction to continuously improve user experience and platform accessibility. This project
+                    recreates several frontend interaction systems inspired by modern streaming environments while
+                    focusing on responsive UI design and realistic playback architecture.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<body>
+    <nav class="nav">
+        <div class="nav1">
+            <li><img src="Images/spotifylogo.png" alt=""></li>
+            <li> <a href="index.html"><img style="padding-left: 20px;" src="Images/home.png" alt=""></a></li>
+            <input type="text" placeholder="what do you want to play ?">
+            <button class="btn">Search</button>
+        </div>
+        <div class="nav2">
+            <li class="premiumbtn">Premium</li>
+            <li class="supportbtn">Support</li>
+            <li class="downloadbtn">Download</li>
+            <li class="installbtn">Install App</li>
+            <li class="signupbtn">Sign Up</li>
+            <button class="loginbtn">Log In</button>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <div class="lib">
+                <div style="font-size: large;">Your Library</div>
+                <div style="filter: invert(100%);"><img width="20px" src="Images/add.png" alt=""></div>
+            </div>
+            <div class="bracket0">
+                <div>
+                    <h3>Your Playlist</h3>
+                </div>
+                <div class="songlist">
+                    <div class="info">
+                        <img width="30px" src="Images/music.png" alt="">
+                        <div>Song Details</div>
+                        <button>Shuffle All</button>
+                    </div>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="bracket1">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Create another playlist</h3>
+                    <img width="25px" style="filter: invert(100%);" src="Images/playlist.png" alt="">
+                </div>
+                <div>
+                    <p style="font-weight: 600;">It's easy, we'll help you</p>
+                </div>
+                <button>Create Playlist</button>
+            </div>
+            <div class="bracket2">
+                <div>
+                    <h3>Let's find some podcasts to follow</h3>
+                </div>
+                <div>
+                    <p style="font-weight: 600;">We'll keep you updated on new episodes</p>
+                </div>
+                <button>Browse Podcasts</button>
+            </div>
+            <div class="foot">
+                <div>
+                    <ol>
+                        <li>Legal</li>
+                        <li>Privacy Policy</li>
+                        <li>Safety Center</li>
+                    </ol>
+                </div>
+                <ol>
+                    <li>Cookies</li>
+                    <li>About Us</li>
+                    <li>Accessibility</li>
+                </ol>
+            </div>
+            <div class="lang">
+                <button><img width="25px" src="Images/globe.png" alt="">
+                    English
+                    <img width="10px" src="Images/downarrow.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <img src="Images/Aashiqui2.jpg" alt="">
+                <div class="titleb">
+                    <p></p>
+                    <div class="singer">
+                        <img width="10px" src="" alt="">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="songbody">
+                <div class="sbtitle">
+                    <div class="ptbns" style="display: flex; align-items: center; gap: 25px;">
+                        <div class="pbtn">
+                            <img width="25px" src="Images/playbutton.png" alt="">
+                        </div>
+                        <img style="filter: invert(0.7);" width="40px" height="40PX" src="Images/shuffle2.png" alt="">
+                        <img width="40px" class="playlistt" style="filter: invert(0.7);" src="Images/playlist.png" alt="">
+                    </div>
+                    <div class="listtt">
+                        <img style="filter: invert(0.7);" height="25px" src="Images/queue.png" alt="">
+                    </div>
+                </div>
+                <div class="line2"></div>
+                <div class="albumplaylist"></div>
+
+            </div>
+            <div class="line"></div>
+            <div class="foott">
+                <ul class="companycolumn">
+                    <li>Company</li>
+                    <li>About Us</li>
+                    <li>Jobs</li>
+                    <li>For Record</li>
+                    <li>Report Bug</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <ul class="communitiescolumn">
+                    <li>Communities</li>
+                    <li>Artists</li>
+                    <li>Developers</li>
+                    <li>Advertising</li>
+                    <li>Investors</li>
+                    <li>Vendors</li>
+                </ul>
+                <ul class="usefullinkscolumn">
+                    <li>Useful Links</li>
+                    <li>Support</li>
+                    <li>Mobie App</li>
+                    <li>Popular in country</li>
+                    <li>Import Your Music</li>
+                    <li>Upload Your Music</li>
+                </ul>
+                <ul class="planscolumn">
+                    <li>Spotify Plans</li>
+                    <li>Premium Free</li>
+                    <li>Premium Students</li>
+                    <li>Premium Lite</li>
+                    <li>Premium Standard</li>
+                    <li>Premium Platinum</li>
+                </ul>
+            </div>
+            <div class="line2"></div>
+            <div class="end">
+                <div class="endtext">
+                    Spotify2026
+                </div>
+                <div class="apps">
+                    <img src="Images/instagram.png" alt="">
+                    <img src="Images/facebook.png" alt="">
+                    <img src="Images/twitter.png" alt="">
+                    <img src="Images/tiktok.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="playbar">
+            <div class="songdetails">
+                <img width="60px" src="Images/playingmusic.jpg" alt="">
+                <div>
+                    <h3 class="currentsongtitle"></h3>
+                </div>
+            </div>
+            <div class="seekbar">
+                <div class="slidecontainer2">
+                    <input type="range" min="0" max="100" step="0.01" value="50" class="slider2" id="myRange">
+                </div>
+            </div>
+            <div class="abovebar">
+                <div class="songinfo">
+                </div>
+                <div class="playbuttons">
+                    <img width="25px" class="shuffle" src="Images/shuffle.png" alt="">
+                    <img width="25px" id="previous" src="Images/previous.png" alt="">
+                    <img id="play" width="27px" src="Images/pause.png" alt="">
+                    <img width="25px" id="next" src="Images/next-button.png" alt="">
+                    <img width="25px" id="repeat" src="Images/repeat.png">
+                </div>
+                <div class="songtime"></div>
+            </div>
+            <div class="audio">
+                <img width="20px" class="lyricsbtn" src="Images/lyrics.png" alt="">
+                <img class="vol" width="20px" src="Images/volume.png" alt="">
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <img width="15px" class="fullscreenbtn" src="Images/fullscreen.png" alt="">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot1">
+            <div style="font-weight: 600;">Preview of Spotify</div>
+            <div style="font-size: 17px;">Sign up to get unlimited songs and podcasts with ocassional ads. No credit
+                cards needed.</div>
+        </div>
+        <button class="footersignupbtn">Sign Up</button>
+    </footer>
+</body>
+<script src="album.js"></script>
+
+</html>
